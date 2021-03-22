@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>Imersão Conversão de Moeda</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Conversor de moedas
+        </h1>
+        <p class="page-subtitle">
+            Descubra os valores em dolar U$
+        </p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+            class="page-logo" alt="">
+    </div>
+
+    <div class="formContainer">
+        <form id="conversorForm" action="">
+            <div class="item">
+                <div>Digite o valor em dolar a ser convertido:</div>
+                <div><input 
+                    type="text" 
+                    name="dollar"
+                    placeholder="$0.00" 
+                    value=""
+                    onkeyup="Mask.formatUSD(this, this.value)">
+                </div>
+            </div>
+            <div class="item">
+                <div>Cotação atual do dolar:</div>
+                <div><input 
+                    type="text" 
+                    name="dollarPrice"
+                    value="R$5,50"
+                    readonly> 
+                </div>
+            </div>
+            <div class="button">
+                <button type="button" onclick="convertUSDtoBRL()">Converter</button>
+            </div>
+            <div class="item result">
+
+            </div>
+
+            <!-- inserir via javascript resultado da conversão -->
+            
+            </form>
+        </form>
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+    <script src="script.js"></script>
+</body>
+
+</html>
